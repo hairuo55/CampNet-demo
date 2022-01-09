@@ -86,6 +86,258 @@
       <hr>
 
 
+      
+      
+ <h3><font size="6"  color="red">A1: added experiment for review: Comparison with full TTS system (replacement operation)</font></h3>
+<b><p> Note: In this experiment, 	all the speakers are unseen in the training set. The TTS system uses global style tokens(GST) to guide the synthesis of target speaker's voice (one-shot learning).			 </b></p>
+                  <div class="big-screen">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="20%">Original</th>
+                          <th width="20%">Full TTS</th>
+						  <th width="20%">CampNet</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+						<tr>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/exp2/p225_002_org.wav" type="audio/wav" />
+                            </audio><br><i> Ask her to <font size="4"  color="red">bring</font> these things with her from the store.</i>
+                          </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp5/tts/p225_002.wav" type="audio/wav" />
+                            </audio><br><i> Ask her to <font size="4"  color="red">bring</font> these things with her from the store.</i>
+                          </td>
+						  
+
+
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp2/p225_002_camp.wav" type="audio/wav" />
+                            </audio><br><i> Ask her to <font size="4"  color="red">bring</font> these things with her from the store.</i>
+                          </td>						       
+						</tr>				
+
+
+    <tr>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/exp2/p226_004_org.wav" type="audio/wav" />
+                            </audio><br><i> We also need a small <font size="4"  color="red">plastic</font> snake and a big toy frog for the kids.</i>
+                          </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp5/tts/p226_004.wav" type="audio/wav" />
+                            </audio><br><i> We also need a small <font size="4"  color="red">plastic</font> snake and a big toy frog for the kids.</i>
+                          </td>
+						  
+
+
+
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp2/p226_004_camp.wav" type="audio/wav" />
+                            </audio><br><i> We also need a small <font size="4"  color="red">plastic</font> snake and a big toy frog for the kids.</i>
+                          </td>						  
+                       </tr>						
+
+                       
+					<tr>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/exp3/p225_020.wav" type="audio/wav" />
+                            </audio><br><i> Many <font size="4"  color="red">complicated</font> ideas about the rainbow have been formed.</i>
+                          </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp5/tts/p225_020.wav" type="audio/wav" />
+                            </audio><br><i> Many <font size="4"  color="red">complicated</font> ideas about the rainbow have been formed.</i>
+                          </td>
+						  
+
+
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp3/p225_020_fine.wav" type="audio/wav" />
+                            </audio><br><i> Many <font size="4"  color="red">complicated</font> ideas about the rainbow have been formed.</i>
+                          </td>
+						</tr>				
+                        
+   
+						<tr>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/exp3/p226_007.wav" type="audio/wav" />
+                            </audio><br><i> The rainbow is a <font size="4"  color="red">division</font> of white light into many beautiful colors.</i>
+                          </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp5/tts/p226_007.wav" type="audio/wav" />
+                            </audio><br><i> The rainbow is a <font size="4"  color="red">division</font> of white light into many beautiful colors.</i>
+                          </td>
+						  
+
+
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp3/p226_007_fine.wav" type="audio/wav" />
+                            </audio><br><i> The rainbow is a <font size="4"  color="red">division</font> of white light into many beautiful colors.</i>
+                          </td>
+						</tr>		
+   
+                        
+                      </tbody>
+                    </table>
+                  </div>		
+		  <hr>
+            
+      
+      
+      
+      
+ <h3><font size="6"  color="red">A2: added experiment for review:  Robustness test of CampNet on the mask area's duration  at the inference stage (insertion operation).</font></h3>
+<p><b>
+			Note:   In this experiment, we set different duration for the words to be inserted, and the duration range is large (the maximum duration can be close to three times the minimum duration). 
+            Through the experiment, we can find that the model has good robustness to the duration, and can automatically adjust the speed of the words to be edited with the change of duration.</b></p>			 
+				 
+                  <div class="big-screen">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th width="12%" >Speaker</th>
+                          <th width="18%">Original</th>
+                          <th width="20%">duration=0.225s</th>
+                          <th width="20%">duration=0.3s</th>
+                          <th width="20%">duration=0.375s</th>
+						  <th width="20%">duration=0.45s</th>
+                          <th width="20%">duration=0.525s</th>
+                          <th width="20%">duration=0.6s</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        
+						<tr>
+                        <th  scope="row"> p225 <br> (unseen speaker) </th>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/p225_007.wav" type="audio/wav" />
+                             </audio><br><i>The rainbow is a division of white light into many beautiful colors.</i>
+                         </td>
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_06.wav" type="audio/wav" />
+                            </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                         </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_08.wav" type="audio/wav" />
+                           </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                         </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_10.wav" type="audio/wav" />
+                            </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                         </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_12.wav" type="audio/wav" />
+                            </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                          </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_14.wav" type="audio/wav" />
+                             </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                         </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p225_007_16.wav" type="audio/wav" />
+                           </audio><br><i>The rainbow is <font size="4"  color="red">just</font> a division of white light into many beautiful colors.</i>
+                         </td>
+                          	       
+						</tr>				
+
+                            
+ <tr>
+                          <th width="12%" >Speaker</th>
+                          <th width="18%">Original</th>
+                          <th width="20%">duration=0.375s</th>
+                          <th width="20%">duration=0.5s</th>
+                          <th width="20%">duration=0.625s</th>
+						  <th width="20%">duration=0.75s</th>
+                          <th width="20%">duration=0.875s</th>
+                          <th width="20%">duration=1s</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+						<tr>
+                          <th  scope="row"> p226 <br> (unseen speaker)</th>
+                          <td> 
+                            <audio controls>
+                              <source src="./audio/p226_017.wav" type="audio/wav" />
+                          </audio><br><i> Others have tried to explain the phenomenon physically.</i>
+                         </td>
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_06.wav" type="audio/wav" />
+                          </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                        </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_08.wav" type="audio/wav" />
+                         </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                         </td>
+						  
+						  <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_10.wav" type="audio/wav" />
+                          </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                         </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_12.wav" type="audio/wav" />
+                          </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                         </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_14.wav" type="audio/wav" />
+                            </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                          </td>
+
+                          <td>
+                            <audio controls>
+                              <source src="./audio/exp6/p226_017_16.wav" type="audio/wav" />
+                          </audio><br><i> Others have tried to explain the <font size="4"  color="red">very weird</font> phenomenon physically.</i>
+                         </td>
+                          	       
+						</tr>				
+
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>		
+		  <hr>      
+      
 
 
 		  
